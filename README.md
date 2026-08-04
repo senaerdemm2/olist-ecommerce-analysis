@@ -36,7 +36,8 @@ São Paulo (SP) alone drives **R$5.77M (37%)** of total revenue with 40,501 orde
 
 **How the dashboard answers it:** The "Top 10 States by Revenue" bar chart on Page 1, with enriched tooltips showing revenue, order count, average delivery days, and average order value per state in a single hover. An executive can scan the chart in 5 seconds and immediately see both the concentration and the per-order upside of expansion markets.
 
-**Recommended Action:** Treat SP as the home market requiring depth (faster delivery, wider assortment, in-region warehousing). Launch a premium-category pilot in BA — small population, 29% higher AOV than SP, low current penetration. This is a low-risk expansion bet that the concentration metric alone would not surface.
+**Recommended Action** Treat SP as the home market requiring depth (faster delivery, wider assortment, in-region warehousing). Launch a premium-category pilot in BA — small population, 29% higher AOV than SP, low current penetration. This is a low-risk expansion bet that the concentration metric alone would not surface.
+
 ---
 
 ### Problem 2 — Category Portfolio Dependency
@@ -115,7 +116,8 @@ Monthly revenue grew from **R$143K (Sep 2016)** to **R$1.13M (Apr 2018)** — an
 
 **How the dashboard answers it:** The "Monthly Revenue Trend" line chart on Page 1, with order count and unique customer count also available in the underlying data for capacity planning. The November spike is visually unmissable on the line chart.
 
-**Recommended Action **  Pre-position inventory in SP warehouses by October 15. Surge customer-support headcount by November 1. Lock in seller-side stock commitments 60 days in advance. Open a temporary logistics-provider contract for the November 15–30 window. Under-provisioning for November is the most expensive operational mistake Olist can make — every canceled order during the peak window compounds Problem 5.
+**Recommended Action**  Pre-position inventory in SP warehouses by October 15. Surge customer-support headcount by November 1. Lock in seller-side stock commitments 60 days in advance. Open a temporary logistics-provider contract for the November 15–30 window. Under-provisioning for November is the most expensive operational mistake Olist can make — every canceled order during the peak window compounds Problem 5.
+
 ---
 
 
@@ -230,13 +232,13 @@ Category names are stored in Portuguese. A `LEFT JOIN` to `product_category_name
 
 ## 📄 License
 
-This project is for educational and portfolio purposes. The underlying dataset is publicly available from Olist on Kaggle.
+This project is for  portfolio purposes. The underlying dataset is publicly available from Olist on Kaggle.
 
 ---
 
 ## 👤 Author
 
-Sena Erdem — Data Analyst in training
+Sena Erdem — Data Analyst 
 - LinkedIn: https://www.linkedin.com/in/sena-erdem-a64b91345/
 - GitHub: https://github.com/senaerdemm2
 
