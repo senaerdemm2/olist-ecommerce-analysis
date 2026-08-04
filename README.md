@@ -4,11 +4,11 @@
 
 ---
 ## Dashboard Preview
-Page 1 — Executive Overview
+
+### Page 1 — Executive Overview
 ![Page 1](screenshots/page1_executive_overview.png)
 
-Page 2 — Sales & Product Analysis
-
+### Page 2 — Sales & Product Analysis
 ![Page 2](screenshots/page2_sales_analysis.png)
 
 ## 📌 Project Overview
