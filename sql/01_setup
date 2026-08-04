@@ -1,0 +1,75 @@
+-- ============================================================
+-- OLIST E-COMMERCE PROJECT - DATABASE SETUP
+
+-- Project : Brazilian E-Commerce (Olist) Analysis
+-- Bootcamp: SQL End-to-End Project
+-- Tool    : PostgreSQL (DBeaver)
+-- Author  : Sena Erdem
+-- Date    : 2026
+-- ============================================================
+-- Description:
+--   This script performs the initial database setup:
+--   1. Renames Olist dataset tables to short, friendly names
+--   2. Corrects column data types (string -> TIMESTAMP / DECIMAL / INT)
+--   3. Uses NULLIF to safely handle empty-string values
+--
+-- NOTE: This script should only be run ONCE during project setup.
+--       Re-running will produce "already exists" errors.
+-- ============================================================
+
+
+-- ============================================================
+-- STEP 1: TABLE RENAMING
+-- Rename verbose Olist dataset names to short, query-friendly names
+-- ============================================================
+
+ALTER TABLE olist_customers_dataset        RENAME TO customers;
+ALTER TABLE olist_order_items_dataset      RENAME TO order_items;
+ALTER TABLE olist_orders_dataset           RENAME TO orders;
+ALTER TABLE olist_products_dataset         RENAME TO products;
+
+-- Optional: verify rename
+-- SELECT table_name FROM information_schema.tables
+-- WHERE table_schema = 'public' ORDER BY table_name;
+
+
+-- ============================================================
+-- STEP 2: COLUMN TYPE CORRECTIONS — ORDERS TABLE
+-- Convert string-based date columns to TIMESTAMP
+-- ============================================================
+
+ALTER TABLE orders ALTER COLUMN order_purchase_timestamp      TYPE TIMESTAMP USING NULLIF(order_purchase_timestamp, '')::TIMESTAMP;
+ALTER TABLE orders ALTER COLUMN order_approved_at             TYPE TIMESTAMP USING NULLIF(order_approved_at, '')::TIMESTAMP;
+ALTER TABLE orders ALTER COLUMN order_delivered_carrier_date  TYPE TIMESTAMP USING NULLIF(order_delivered_carrier_date, '')::TIMESTAMP;
+ALTER TABLE orders ALTER COLUMN order_delivered_customer_date TYPE TIMESTAMP USING NULLIF(order_delivered_customer_date, '')::TIMESTAMP;
+ALTER TABLE orders ALTER COLUMN order_estimated_delivery_date TYPE TIMESTAMP USING NULLIF(order_estimated_delivery_date, '')::TIMESTAMP;
+
+
+-- ============================================================
+-- STEP 3: COLUMN TYPE CORRECTIONS — ORDER_ITEMS TABLE
+-- Convert string-based numeric columns to DECIMAL
+-- Convert string-based date column to TIMESTAMP
+-- ============================================================
+
+ALTER TABLE order_items ALTER COLUMN price              TYPE DECIMAL(10,2) USING NULLIF(price, '')::DECIMAL(10,2);
+ALTER TABLE order_items ALTER COLUMN freight_value      TYPE DECIMAL(10,2) USING NULLIF(freight_value, '')::DECIMAL(10,2);
+ALTER TABLE order_items ALTER COLUMN shipping_limit_date TYPE TIMESTAMP    USING NULLIF(shipping_limit_date, '')::TIMESTAMP;
+
+
+-- ============================================================
+-- STEP 4: COLUMN TYPE CORRECTIONS — PRODUCTS TABLE
+-- Convert string-based numeric columns to INT
+-- ============================================================
+
+ALTER TABLE products ALTER COLUMN product_name_lenght       TYPE INT USING NULLIF(product_name_lenght, '')::INT;
+ALTER TABLE products ALTER COLUMN product_description_lenght TYPE INT USING NULLIF(product_description_lenght, '')::INT;
+ALTER TABLE products ALTER COLUMN product_photos_qty        TYPE INT USING NULLIF(product_photos_qty, '')::INT;
+ALTER TABLE products ALTER COLUMN product_weight_g          TYPE INT USING NULLIF(product_weight_g, '')::INT;
+ALTER TABLE products ALTER COLUMN product_length_cm         TYPE INT USING NULLIF(product_length_cm, '')::INT;
+ALTER TABLE products ALTER COLUMN product_height_cm         TYPE INT USING NULLIF(product_height_cm, '')::INT;
+ALTER TABLE products ALTER COLUMN product_width_cm          TYPE INT USING NULLIF(product_width_cm, '')::INT;
+
+-- ============================================================
+-- SETUP COMPLETE
+-- Tables are now ready for analysis queries (02_analysis_queries.sql)
+-- ============================================================
