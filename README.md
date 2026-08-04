@@ -36,8 +36,7 @@ São Paulo (SP) alone drives **R$5.77M (37%)** of total revenue with 40,501 orde
 
 **How the dashboard answers it:** The "Top 10 States by Revenue" bar chart on Page 1, with enriched tooltips showing revenue, order count, average delivery days, and average order value per state in a single hover. An executive can scan the chart in 5 seconds and immediately see both the concentration and the per-order upside of expansion markets.
 
-**The decision it enables:** Whether to (a) double down on SP with deeper inventory investment and faster delivery promises, or (b) launch growth programs in underpenetrated high-AOV states like BA, DF, and GO. Both strategies are valid — the dashboard's job is to surface the tradeoff, not to make the choice.
-
+**Recommended Action:** Treat SP as the home market requiring depth (faster delivery, wider assortment, in-region warehousing). Launch a premium-category pilot in BA — small population, 29% higher AOV than SP, low current penetration. This is a low-risk expansion bet that the concentration metric alone would not surface.
 ---
 
 ### Problem 2 — Category Portfolio Dependency
@@ -52,7 +51,7 @@ The top 10 categories generate **R$9.53M (62%)** of revenue. `health_beauty` (R$
 
 **How the dashboard answers it:** The dynamic "Top 10 Categories" bar chart on Page 2 — users toggle between Revenue and Orders via a slicer (disconnected-table pattern with DAX `SWITCH` + `SELECTEDVALUE`). Flipping between the two views reveals which categories are volume drivers (e.g., `bed_bath_table` — many orders, moderate revenue) vs. value drivers (e.g., `watches_gifts` — fewer orders, high revenue).
 
-**The decision it enables:** Where to invest in exclusive seller partnerships and expanded assortment (high-AOV categories like `watches_gifts` and `computers_accessories`) vs. where to optimize fulfillment cost and turnaround (high-volume categories like `bed_bath_table` and `sports_leisure`).
+**Recommended Action:**  Protect watches_gifts aggressively — exclusive seller partnerships, expanded assortment, proactive stock verification. Losing one top watches seller would cost more revenue than losing three average sellers in housewares. This is also the highest-ROI category for a seller-loyalty program (preferred fees, priority placement).
 
 ---
 
@@ -68,7 +67,7 @@ The catalog-wide average delivery time is around **12 days**, but several catego
 
 **How the dashboard answers it:** The "Avg Delivery Time by Category" chart on Page 2 — sorted descending so the worst performers surface at the top immediately. The visual makes the bulky-category pattern impossible to miss.
 
-**The decision it enables:** Whether to (a) introduce category-specific delivery promises at checkout (e.g., "12–18 business days for furniture"), (b) negotiate dedicated bulky-freight contracts with third-party logistics providers, or (c) require sellers in slow categories to either use Olist's fulfillment partner or risk delisting.
+**Recommended Action:** Introduce category-specific delivery promises at checkout (e.g., "12–18 business days for furniture") so buyer expectations match operational reality. In parallel, negotiate a dedicated bulky-freight contract with a national carrier — the bottleneck is physical (heavy/oversized items require scheduled freight), not seller laziness.
 
 ---
 
@@ -84,7 +83,7 @@ Platform-wide cancellation rate is **0.63%** — healthy by e-commerce standards
 
 **How the dashboard answers it:** The "Cancellation Rate by Category" bonus chart on Page 2 — filtered with `HAVING COUNT(*) > 10` to exclude statistically noisy micro-categories where 1 cancellation in 3 orders would otherwise show a misleading 33% rate.
 
-**The decision it enables:** Whether to trigger a seller audit in flagged categories, require inventory verification before listing, cap daily order acceptance for sellers with chronic cancellation patterns, or remove repeat offenders from the platform entirely.
+**Recommended Action** Trigger seller audits in construction_tools_safety (2.58% on 194 orders) and musical_instruments (1.62% on 680 orders) — these have meaningful volume, not statistical noise. Require inventory verification before listing for any seller exceeding 2% cancellation rate. Cap daily order acceptance for chronic offenders pending remediation.
 
 ---
 
@@ -100,7 +99,7 @@ Only **2,801 of 93,358 customers (3.0%)** have ever placed a second order. Repea
 
 **How the dashboard answers it:** The "Repeat Customer Rate" KPI card on Page 1 (with revenue contribution shown alongside), plus the "Revenue by Customer Segment" bar chart with self-explanatory subtitle (Low <500 | Regular 500–1000 | Premium >1000 BRL). The segment subtitle is critical: without it, an executive would have to ask what "Low" means, breaking the self-service principle.
 
-**The decision it enables:** Whether to launch a post-purchase retention program (loyalty tier, post-purchase email cadence, category-based re-engagement offers) — and how much budget to allocate. The math: even a 1-percentage-point lift in repeat rate (3% → 4%) represents ~930 additional repeat customers generating roughly **R$1.5M of incremental revenue** from the existing customer base, with zero acquisition spend.
+**Recommended Action:**  Launch a post-purchase lifecycle program: day-7 review prompt → day-30 category re-engagement → day-90 loyalty offer. Prioritize the Premium segment (1,148 customers, R$1.8M revenue) for early experiments. The math: even a 1-point lift in repeat rate (3% → 4%) unlocks ~R$1.5M of incremental revenue from the existing 93K customer base, with zero acquisition spend.
 
 ---
 
@@ -116,8 +115,7 @@ Monthly revenue grew from **R$143K (Sep 2016)** to **R$1.13M (Apr 2018)** — an
 
 **How the dashboard answers it:** The "Monthly Revenue Trend" line chart on Page 1, with order count and unique customer count also available in the underlying data for capacity planning. The November spike is visually unmissable on the line chart.
 
-**The decision it enables:** When to start seasonal hiring (October), when to pre-position inventory in SP warehouses (mid-October), and how much customer-support capacity to add for the November window. Under-provisioning for November is the most expensive operational mistake Olist can make — every canceled order due to slow support during the peak window is a customer who will not return, compounding Problem 5.
-
+**Recommended Action **  Pre-position inventory in SP warehouses by October 15. Surge customer-support headcount by November 1. Lock in seller-side stock commitments 60 days in advance. Open a temporary logistics-provider contract for the November 15–30 window. Under-provisioning for November is the most expensive operational mistake Olist can make — every canceled order during the peak window compounds Problem 5.
 ---
 
 
